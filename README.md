@@ -1,4 +1,4 @@
-# flutter_clean_architecture
+# flutter_gorouter_riverpod
 
 A new Flutter project.
 
