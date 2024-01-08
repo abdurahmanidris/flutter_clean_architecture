@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_clean_architecture/route/go_router_provider.dart';
+import 'package:flutter_gorouter_riverpod/route/go_router_provider.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
