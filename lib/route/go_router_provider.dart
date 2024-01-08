@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_flutter_app/features/cart/presentation/ui/cart_screen.dart';
-import 'package:my_flutter_app/features/dashboard/presentation/ui/dashboard_screen.dart';
-import 'package:my_flutter_app/features/home/presentation/ui/home_screen.dart';
-import 'package:my_flutter_app/features/setting/presentation/ui/setting_screen.dart';
-import 'package:my_flutter_app/route/named_route.dart';
-import 'package:my_flutter_app/screen/error/route_error_screen.dart';
+import 'package:flutter_clean_architecture/features/cart/presentation/ui/cart_screen.dart';
+import 'package:flutter_clean_architecture/features/dashboard/presentation/ui/dashboard_screen.dart';
+import 'package:flutter_clean_architecture/features/home/presentation/ui/home_screen.dart';
+import 'package:flutter_clean_architecture/features/setting/presentation/ui/setting_screen.dart';
+import 'package:flutter_clean_architecture/route/named_route.dart';
+import 'package:flutter_clean_architecture/screen/error/route_error_screen.dart';
 
 final GlobalKey<NavigatorState> _rootNavigator = GlobalKey(debugLabel: 'root');
 final GlobalKey<NavigatorState> _shellNavigator =

@@ -1,4 +1,4 @@
-# my_flutter_app
+# flutter_clean_architecture
 
 A new Flutter project.
 
