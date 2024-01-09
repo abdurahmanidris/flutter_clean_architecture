@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gorouter_riverpod/features/dashboard/presentation/ui/widget/bottom_navigation_widget.dart';
+import 'package:flutter_gorouter_riverpod/features/dashboard/presentation/ui/widget/drawer_widget.dart';
+// import 'package:flutter_gorouter_riverpod/features/dashboard/presentation/ui/widget/navbar_widget.dart';
 
 class DashboardScreen extends StatefulWidget {
   final Widget child;
@@ -13,6 +15,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('CBE Mobile Banking'),
+        backgroundColor: Colors.blue,
+      ),
+      drawer: const DrawerWidget(),
       body: widget.child,
       bottomNavigationBar: const BottomNavigationWidget(),
     );
