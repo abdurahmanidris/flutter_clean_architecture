@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gorouter_riverpod/features/setting/presentation/ui/setting_screen.dart';
+import 'package:go_router/go_router.dart';
 
 class DrawerWidget extends StatefulWidget {
+  final name = 'Abdurahman Idris';
   const DrawerWidget({super.key});
 
   @override
@@ -16,6 +19,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
         'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fen%2Ffree-png-aztay&psig=AOvVaw1V31gCV8rvuBaiNZIovoZO&ust=1704877073960000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCOC82qX4z4MDFQAAAAAdAAAAABAE';
 
     return Drawer(
+      /*shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topRight: Radius.zero, bottomRight: Radius.zero)),*/
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       child: ListView(
         padding:
             const EdgeInsets.all(0), //used to remove white space on the top
@@ -54,6 +61,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             title: const Text(' My Profile '),
             onTap: () {
               Navigator.pop(context);
+              context.go('/profile');
             },
           ),
           ListTile(
@@ -61,6 +69,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             title: const Text(' Change PIN '),
             onTap: () {
               Navigator.pop(context);
+              // Router.neglect(context, () => context.go('/setting'));
+              /*Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SettingScreen()));*/
+              context.go('/changePIN');
             },
           ),
           ListTile(
@@ -74,7 +86,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 color: Colors.red,
                 width: 20,
                 height: 20,
-                child: Center(
+                child: const Center(
                   child: Text(
                     '8',
                     style: TextStyle(color: Colors.white, fontSize: 12),
