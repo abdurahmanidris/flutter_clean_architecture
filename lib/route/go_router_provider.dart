@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gorouter_riverpod/features/drawer_pages/presentation/ui/change_pin_screen.dart';
+import 'package:flutter_gorouter_riverpod/features/drawer_pages/presentation/ui/profile_screen.dart';
 import 'package:flutter_gorouter_riverpod/features/product/presentation/ui/widget/product_detail_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -30,6 +32,26 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           child: child,
         ),
         routes: [
+          GoRoute(
+            path: '/profile',
+            name: profile,
+            pageBuilder: (context, state) {
+              return NoTransitionPage(
+                  child: ProfileScreen(
+                key: state.pageKey,
+              ));
+            },
+          ),
+          GoRoute(
+            path: '/changePIN',
+            name: changePIN,
+            pageBuilder: (context, state) {
+              return NoTransitionPage(
+                  child: ChangePINScreen(
+                key: state.pageKey,
+              ));
+            },
+          ),
           GoRoute(
               path: '/',
               name: home,
