@@ -33,26 +33,6 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         ),
         routes: [
           GoRoute(
-            path: '/profile',
-            name: profile,
-            pageBuilder: (context, state) {
-              return NoTransitionPage(
-                  child: ProfileScreen(
-                key: state.pageKey,
-              ));
-            },
-          ),
-          GoRoute(
-            path: '/changePIN',
-            name: changePIN,
-            pageBuilder: (context, state) {
-              return NoTransitionPage(
-                  child: ChangePINScreen(
-                key: state.pageKey,
-              ));
-            },
-          ),
-          GoRoute(
               path: '/',
               name: home,
               pageBuilder: (context, state) {
@@ -62,6 +42,48 @@ final goRouterProvider = Provider<GoRouter>((ref) {
                 ));
               },
               routes: [
+                GoRoute(
+                  path: 'profile',
+                  name: profile,
+                  pageBuilder: (context, state) {
+                    return NoTransitionPage(
+                        child: ProfileScreen(
+                      key: state.pageKey,
+                    ));
+                  },
+                ),
+                GoRoute(
+                  path: 'changePIN',
+                  name: changePIN,
+                  pageBuilder: (context, state) {
+                    /*return NoTransitionPage(
+                        child: ChangePINScreen(
+                      key: state.pageKey,
+                    ));*/
+                    return const MaterialPage(child: ChangePINScreen());
+                  },
+                ),
+                GoRoute(
+                  path: 'cart',
+                  name: cart,
+                  pageBuilder: (context, state) {
+                    return NoTransitionPage(
+                        child: CartScreen(
+                      key: state.pageKey,
+                    ));
+                  },
+                ),
+                GoRoute(
+                  path: 'setting',
+                  name: setting,
+                  pageBuilder: (context, state) {
+                    /*return NoTransitionPage(
+                        child: SettingScreen(
+                      key: state.pageKey,
+                    ));*/
+                    return const MaterialPage(child: SettingScreen());
+                  },
+                ),
                 GoRoute(
                   parentNavigatorKey: _shellNavigator,
                   path: 'productDetail/:id',
@@ -76,26 +98,6 @@ final goRouterProvider = Provider<GoRouter>((ref) {
                   },
                 )
               ]),
-          GoRoute(
-            path: '/cart',
-            name: cart,
-            pageBuilder: (context, state) {
-              return NoTransitionPage(
-                  child: CartScreen(
-                key: state.pageKey,
-              ));
-            },
-          ),
-          GoRoute(
-            path: '/setting',
-            name: setting,
-            pageBuilder: (context, state) {
-              return NoTransitionPage(
-                  child: SettingScreen(
-                key: state.pageKey,
-              ));
-            },
-          )
         ],
       )
     ],

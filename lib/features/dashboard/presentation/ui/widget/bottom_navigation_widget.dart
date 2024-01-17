@@ -33,7 +33,7 @@ class _BottomNavigationWidgetState
         BottomNavigationBarItem(
             activeIcon: Icon(Icons.settings),
             icon: Icon(Icons.settings_applications),
-            label: 'Setting')
+            label: 'Setting'),
       ],
     );
   }

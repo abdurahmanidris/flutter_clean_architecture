@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gorouter_riverpod/features/dashboard/presentation/ui/widget/drawer_widget.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -12,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const DrawerWidget(),
       appBar: AppBar(
         title: const Text('Home Test'),
       ),

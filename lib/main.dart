@@ -25,8 +25,15 @@ class _MyAppState extends ConsumerState<MyApp> {
       routeInformationProvider: router.routeInformationProvider,
       routerDelegate: router.routerDelegate,
       title: 'Flutter Demo',
+      /*theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),*/
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        appBarTheme: const AppBarTheme(
+          color: Colors
+              .green, //<---Set the desired color here like my branding color #000132
+        ),
       ),
     );
   }

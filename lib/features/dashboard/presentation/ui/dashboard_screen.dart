@@ -15,11 +15,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const DrawerWidget(),
-      appBar: AppBar(
+      // drawer: const DrawerWidget(),
+      /*appBar: AppBar(
         title: const Text('CBE Mobile Banking'),
         backgroundColor: Colors.blue,
-      ),
+      ),*/
       body: widget.child,
       bottomNavigationBar: const BottomNavigationWidget(),
     );
